@@ -12,7 +12,7 @@ public class Students {
 
     public boolean isHeightsIncreasing(){
         for (int i = 0; i < heightOfChildren.size() - 1; i++) {
-            if(heightOfChildren.get(i)>heightOfChildren.get(i + 1)){
+            if(heightOfChildren.get(i) > heightOfChildren.get(i + 1)){
                 return false;
             };
         }

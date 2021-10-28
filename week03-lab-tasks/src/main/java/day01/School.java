@@ -5,7 +5,7 @@ public class School {
         Students student = new Students();
         student.addHeight(20);
         student.addHeight(22);
-        student.addHeight(34);
+        //student.addHeight(34);
         student.addHeight(26);
         student.addHeight(28);
         //student.addHeight(30);
