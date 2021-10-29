@@ -1,16 +1,18 @@
 package day04;
 
-public class Locks {
-    public static void main(String[] args) {
+public class Prison {
+    private String[] lock = new String[100];
 
-        String[] lock = new String[100];
+    public void openFreeCells() {
 
-        System.out.print("1.nap: ");
+        //Konstruktor helyett
+       System.out.print("1.nap: ");
         for (int i = 0; i < lock.length; i++) {
             lock[i] = "nyitva";
             System.out.print(lock[i] + " ");
         }
 
+        //Első művelet
         System.out.println();
         System.out.print("2.nap: ");
         for (int i = 1; i < lock.length; i += 2) {
@@ -22,8 +24,9 @@ public class Locks {
 
         System.out.println();
 
+        //Többi műveletek
         int loop = 3;
-        for (int j = 1; j < 99; j++) {
+        for (int j = 1; j < lock.length - 1; j++) {
             System.out.print(loop + ".nap: ");
             for (int i = (loop -1); i < lock.length; i += loop) {
                 if (lock[i].equals("zárva")) {
